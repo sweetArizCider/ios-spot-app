@@ -15,15 +15,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YE1-PM-RYj">
-                                <rect key="frame" x="76" y="362" width="240" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-removebg-preview (13).png" translatesAutoresizingMaskIntoConstraints="NO" id="YE1-PM-RYj">
+                                <rect key="frame" x="39.333333333333343" y="298.66666666666669" width="314.33333333333326" height="255.00000000000006"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="YE1-PM-RYj" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ieh-X2-n5M"/>
-                            <constraint firstItem="YE1-PM-RYj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="n0K-0x-NGm"/>
+                            <constraint firstItem="YE1-PM-RYj" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.8" id="TRe-fz-oiy"/>
+                            <constraint firstItem="YE1-PM-RYj" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Uww-FX-AMS"/>
+                            <constraint firstItem="YE1-PM-RYj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fMj-TB-Ig1"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -32,4 +33,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image-removebg-preview (13).png" width="977" height="255"/>
+    </resources>
 </document>
