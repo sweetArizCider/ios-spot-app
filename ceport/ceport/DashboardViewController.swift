@@ -107,7 +107,7 @@ class DashboardViewController: UIViewController {
     
     // Update Air Quality
     func updateAirQuality(value: Int) {
-        labelAirQuality.text = "Calidad del aire: \(value)"
+        labelAirQuality.text = value
         
         if value < 500 {
             // Good air quality
@@ -126,7 +126,7 @@ class DashboardViewController: UIViewController {
     
     // Update Noise Level
     func updateNoiseLevel(value: Int) {
-        labelNoiseLevel.text = "Nivel de ruido: \(value) dB"
+        labelNoiseLevel.text = value
         
         if value < 40 {
             // Low noise
