@@ -58,6 +58,7 @@ class LoginViewController: UIViewController {
             // This runs on background thread, switch to main thread for UI updates
             DispatchQueue.main.async {
                 if let error = error {
+                    
                     // Login failed - show error
                     self.showAlert(message: error)
                 } else if let user = user {
