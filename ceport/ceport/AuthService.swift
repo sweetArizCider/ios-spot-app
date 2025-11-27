@@ -63,7 +63,7 @@ class AuthService: NSObject {
             let httpResponse = response as? HTTPURLResponse
             let statusCode = httpResponse?.statusCode ?? 0
             
-            if statusCode == 200 {
+            if statusCode == 201 {
                 // Success - parse the user
                 if let user = try? JSONDecoder().decode(User.self, from: data) {
                     completion(user, nil)
