@@ -24,6 +24,7 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var buttonTransit: UIButton!
     
     @IBOutlet weak var labelSystemStatusDescription: UILabel!
+    @IBOutlet weak var labelStatusUpdate: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

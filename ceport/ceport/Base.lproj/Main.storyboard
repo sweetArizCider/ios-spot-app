@@ -1002,6 +1002,7 @@
                         <outlet property="labelAirQuality" destination="ngg-FV-tqb" id="Pf2-Gv-brd"/>
                         <outlet property="labelHumidity" destination="8Um-vR-JdO" id="BNf-er-B14"/>
                         <outlet property="labelNoiseLevel" destination="6r1-dS-rlw" id="57k-Xo-Ycu"/>
+                        <outlet property="labelStatusUpdate" destination="2sW-30-UNN" id="Jh3-uS-6zU"/>
                         <outlet property="labelSystemStatusDescription" destination="R2n-XK-bbn" id="yxW-10-Nw8"/>
                         <outlet property="labelTemperature" destination="Q7c-JC-D9Y" id="x5C-HB-Iaa"/>
                         <outlet property="labelWelcome" destination="z50-SL-a8h" id="phU-kb-zNN"/>
