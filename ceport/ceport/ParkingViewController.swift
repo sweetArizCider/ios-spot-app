@@ -28,9 +28,9 @@
 
           // Print user info for testing
           if let user = currentUser {
-              print("Welcome to Parking: \(user.email)")
+              print("Bienvenido al Estacionamiento: \(user.email)")
               if let name = user.name {
-                  print("User name: \(name)")
+                  print("Nombre de usuario: \(name)")
               }
           }
           
@@ -122,20 +122,20 @@
           SensorService.shared.getSensorStatus(sensorName: sensorName) { status, error in
               guard let status = status else {
                   DispatchQueue.main.async {
-                      self.showAlert(title: "Error", message: error ?? "Failed to get sensor status")
+                      self.showAlert(title: "Error", message: error ?? "No se pudo obtener el estado del sensor")
                   }
                   return
               }
               
               DispatchQueue.main.async {
                   // Show confirmation dialog
-                  let action = status.isActive ? "deactivate" : "activate"
-                  let message = "Do you want to \(action) spot \(spotNumber)?"
+                  let action = status.isActive ? "desactivar" : "activar"
+                  let message = "¿Deseas \(action) el lugar \(spotNumber)?"
                   
-                  let alert = UIAlertController(title: "Spot \(spotNumber)", message: message, preferredStyle: .alert)
+                  let alert = UIAlertController(title: "Lugar \(spotNumber)", message: message, preferredStyle: .alert)
                   
                   // Confirm button
-                  alert.addAction(UIAlertAction(title: "Yes", style: .default) { _ in
+                  alert.addAction(UIAlertAction(title: "Sí", style: .default) { _ in
                       if status.isActive {
                           // Deactivate sensor
                           self.deactivateSensor(sensorName: sensorName, spotNumber: spotNumber)
@@ -146,7 +146,7 @@
                   })
                   
                   // Cancel button
-                  alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+                  alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel))
                   
                   self.present(alert, animated: true)
               }
@@ -160,7 +160,7 @@
                   if let error = error {
                       self.showAlert(title: "Error", message: error)
                   } else {
-                      self.showAlert(title: "Success", message: "Spot \(spotNumber) activated")
+                      self.showAlert(title: "Éxito", message: "Lugar \(spotNumber) activado")
                       // Refresh the UI
                       self.checkSensorStatusAndData()
                   }
@@ -175,7 +175,7 @@
                   if let error = error {
                       self.showAlert(title: "Error", message: error)
                   } else {
-                      self.showAlert(title: "Success", message: "Spot \(spotNumber) deactivated")
+                      self.showAlert(title: "Éxito", message: "Lugar \(spotNumber) desactivado")
                       // Refresh the UI
                       self.checkSensorStatusAndData()
                   }

@@ -41,17 +41,17 @@ class LoginViewController: UIViewController {
     @IBAction func buttonContinue(_ sender: UIButton) {
         // Get email and password from text fields
         guard let email = labelUserInput.text, !email.isEmpty else {
-            showAlert(message: "Please enter your email")
+            showAlert(message: "Por favor ingresa tu correo electrónico")
             return
         }
         
         guard let password = labelPasswordInput.text, !password.isEmpty else {
-            showAlert(message: "Please enter your password")
+            showAlert(message: "Por favor ingresa tu contraseña")
             return
         }
         
         // Show loading (you can add an activity indicator here if you want)
-        print("Logging in...")
+        print("Iniciando sesión...")
         
         // Call the login service
         AuthService.shared.login(email: email, password: password) { user, error in
@@ -64,7 +64,7 @@ class LoginViewController: UIViewController {
                 } else if let user = user {
                     // Login successful - store user and navigate
                     self.loggedInUser = user
-                    print("Login successful: \(user.email)")
+                    print("Inicio de sesión exitoso: \(user.email)")
                     
                     // Perform the segue to ParkingViewController
                     self.performSegue(withIdentifier: "arrow0", sender: self)
