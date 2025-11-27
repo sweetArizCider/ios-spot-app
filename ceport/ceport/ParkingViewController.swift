@@ -39,5 +39,9 @@ class ParkingViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func spotAction0(_ sender: UIButton) {
+    }
+    @IBAction func spotAction1(_ sender: UIButton) {
+    }
+    
 }
