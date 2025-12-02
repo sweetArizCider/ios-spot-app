@@ -12,6 +12,8 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var labelWelcome: UILabel!
     @IBOutlet weak var buttonBack: UIButton!
     
+    var currentUser: User?
+    
     @IBOutlet weak var labelAirQuality: UILabel!
     @IBOutlet weak var buttonAirQuality: UIButton!
     
@@ -38,6 +40,9 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set welcome message
+        labelWelcome.text = "Bienvenido"
 
         // Initial data fetch
         fetchSensorData()
@@ -207,4 +212,9 @@ class DashboardViewController: UIViewController {
         }
     }
     
+    // Back button action
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        // Dismiss the current view controller
+        dismiss(animated: true, completion: nil)
+    }
 }
